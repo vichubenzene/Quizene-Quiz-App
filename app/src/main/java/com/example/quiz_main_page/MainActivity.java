@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 firstphase.setVisibility(View.GONE);            }
         };
-        handler.postDelayed(runnable, 1500); // Delay the fetchDataFromApi() method by 5 seconds (5000 milliseconds)
+        handler.postDelayed(runnable, 2000); // Delay the fetchDataFromApi() method by 5 seconds (5000 milliseconds)
 
         startbutton= findViewById(R.id.startbutton);
         RadioGroup difficulty = findViewById(R.id.difficulty_radio_group);
