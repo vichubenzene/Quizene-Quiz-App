@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".quizfrag">
+
+    <!-- Score Display at Top Right -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="18dp"
+        android:text="Score: 0"
+        android:id="@+id/scoreTextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="Quiz" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/catogaryname"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_horizontal" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+
+                    android:text="0 . error"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:id="@+id/quizquestionmain"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioGroupoptions"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="fetch error"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/option1"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="fetch error"
+                        android:id="@+id/option2"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="fetch error"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/option3"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:text="fetch error"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/option4"/>
+
+                </RadioGroup>
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="Submit"/>
+                    />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="75dp"
+        android:textSize="20dp"
+        />
+    <!-- LottieAnimationView at Bottom Center -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/animation_view"
+        app:lottie_rawRes="@raw/sec15counter"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"/>
+
+</FrameLayout>

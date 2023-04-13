@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+    <LinearLayout
+        android:id="@+id/firstphase"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- TextView for the Quizene text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quizene"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" /> <!-- Set the desired margin from the top -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Made By vichubenzene\n        with Love 💖 and Java"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+        <!-- LottieAnimationView for the animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/opening"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_gravity="center" />
+
+        <!-- TextView below the LottieAnimationView --><!-- Set the desired margin from the top -->
+    </LinearLayout>
+    <TextView
+        android:id="@+id/select_category_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Category"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="18dp"
+        android:text="Score: 0"
+        android:id="@+id/scoreTextView" />
+
+    <ScrollView
+        android:id="@+id/category_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/category_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <GridLayout
+                android:id="@+id/category_grid_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3"
+                android:rowCount="8"
+                android:useDefaultMargins="true">
+
+                <CheckBox
+                    android:id="@+id/general_knowledge_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="General\nKnowledge"/>
+
+                <CheckBox
+                    android:id="@+id/anime_manga_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Anime \nManga"/>
+
+                <CheckBox
+                    android:id="@+id/cartoons_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Cartoons"/>
+
+                <CheckBox
+                    android:id="@+id/computers_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Computers"/>
+
+                <CheckBox
+                    android:id="@+id/film_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Film"/>
+
+                <CheckBox
+                    android:id="@+id/television_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Television"/>
+
+                <CheckBox
+                    android:id="@+id/video_games_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Video \nGames"/>
+
+                <CheckBox
+                    android:id="@+id/board_games_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Board \nGames"/>
+
+                <CheckBox
+                    android:id="@+id/vehicles_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13.5dp"
+                android:text="Vehicles"/>
+                <CheckBox
+                    android:id="@+id/checkBoxBooks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Books"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxMaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Maths"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxMythology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Mythology"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxSports"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Sports"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxGeography"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Geography"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="History" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxPolitics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Politics"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxArt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Art"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxCelebrities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Celebrities"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxNature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Nature"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxComics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Comics"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxGadgets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Gadgets"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxAnimals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Animals"/>>
+                <CheckBox
+                    android:id="@+id/checkBoxMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Music"/>
+
+                <CheckBox
+                    android:id="@+id/checkBoxMusicalsTheatres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.5dp"
+                    android:text="Musicals \nTheatres"/>
+
+            </GridLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Selected"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/selectioncounter"/>
+
+
+            <RadioGroup
+                android:id="@+id/difficulty_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <RadioButton
+                    android:id="@+id/easy_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Easy"
+                    android:checked="true"
+                    android:buttonTint="@android:color/holo_green_dark"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/holo_green_dark"/>
+
+                <RadioButton
+                    android:id="@+id/medium_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium"
+                    android:layout_weight="1"
+                    android:buttonTint="@android:color/holo_orange_dark"
+                    android:textColor="@android:color/holo_orange_dark"/>
+
+                <RadioButton
+                    android:id="@+id/hard_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hard"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/holo_red_dark"/>
+
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:id="@+id/totalquestion"
+                android:orientation="vertical"
+                android:padding="3dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Total Questions"/>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayoutbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/reduce"
+                android:textColor="#ffffff"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/button_states"
+                android:layout_weight="1"
+                android:text="-" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/questioncount"
+                android:text="1"
+                >
+
+            </TextView>
+                <Button
+                    android:id="@+id/increase"
+                    android:textColor="#ffffff"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_states"
+                    android:text="+" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:id="@+id/incrementerror"
+                    android:textColor="#ff3232"
+                    >
+                </TextView>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-2 x10 points\n2+ Combo x12 points\n5+ Combo x14 points\n8+ Combo x15 points"
+                android:layout_gravity="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:id="@+id/tips"
+                >
+            </TextView>
+            <Button
+                android:id="@+id/startbutton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="START QUIZ"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
